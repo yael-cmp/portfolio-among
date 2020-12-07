@@ -1,0 +1,13 @@
+@import '../vars.scss';
+.footer {
+  height: 100px;
+  display: flex;
+  // font-family: $mono-f;
+  justify-content: center;
+  align-items: center;
+}
+.footer-t{
+  font-family: $mono-f;
+  color: $color-white;
+  font-size:small
+}

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Major+Mono+Display&family=Roboto+Mono:wght@100;200;300;400;500&display=swap");
+@import "./responsive.scss";
+//apps colors
+$githubdark: #24292e;
+$github: #d7dde4;
+$twitter: #1ca0f2;
+$instagram: linear-gradient(0.25turn, #fdc468, #df4996);
+$gmail: #c4032a;
+//default colors
+$color-red: #ec1a15;
+$color-sky: #6dc0d9;
+$color-blue: #1f4e7a;
+$color-white: #d8fbfd;
+$color-black: #0c0c0c;
+
+$sans-f: "Lato", sans-serif;
+$mono-f: "Roboto Mono", monospace;
+$special-f: 'Major Mono Display', monospace;

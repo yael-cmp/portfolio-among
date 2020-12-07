@@ -1,0 +1,52 @@
+@import "../responsive.scss";
+@import "../vars.scss";
+.no-visible{
+  visibility: hidden;
+  animation: ocultar 1s ease-in;
+}
+.hero {
+  position: absolute;
+  height: 500px;
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.hero--title {
+  font-family: $mono-f;
+  font-weight: 200;
+  color: $color-white;
+  font-size: 9vh;
+  @include for-size(m) {
+    font-size: 15vh;
+  }
+  @include for-size(xs) {
+    font-size: 8.5vh;
+  }
+}
+
+.hero--p {
+  z-index: 1;
+  background: rgba($color-white, 0.5);
+  border-radius: 1vh;
+  color: black;
+  padding: 0 10px;
+  @include for-size(l) {
+    font-size: 2.9vh;
+  }
+}
+
+@keyframes ocultar{
+  0%{
+    opacity: 100%;
+    visibility: visible;
+    transform: scale3d(1, 1, 1);
+  }
+  100%{
+    visibility: visible;
+    transform: scale3d(1.4, 1.4, 1.4);
+    opacity: 0%;
+  }
+}

@@ -1,0 +1,39 @@
+//brakpoints
+$xs: 340px;
+$s: 440px;
+$m: 768px;
+$l: 1020px;
+$xl: 1440p;
+
+@mixin for-size($size) {
+  @if $size == l {
+    @media (min-width: $l) {
+      @content;
+    }
+  }
+  @if $size == ll {
+    @media (min-width: $l ) and (max-width: $xl) {
+      @content;
+    }
+  }
+  @if $size == m {
+    @media (min-width: $m) {
+      @content;
+    }
+  }
+  @if $size == mm {
+    @media (min-width: $m) and (max-width: $l) {
+      @content;
+    }
+  }
+  @if $size == s {
+    @media (min-width: $s) {
+      @content;
+    }
+  }
+  @if $size == xs {
+    @media (max-width: $s) {
+      @content;
+    }
+  }
+}

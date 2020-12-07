@@ -1,0 +1,103 @@
+@import "../vars.scss";
+
+.carousel {
+  display: grid;
+  gap: 20px;
+  padding: 50px 20px;
+  width: 1000px;
+  @include for-size(s) {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include for-size(mm) {
+    width: 700px;
+  }
+  @include for-size(l) {
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.carousel--card {
+  position: relative;
+  color: $color-white;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border-radius: 10px;
+  transition: ease 0.5s;
+}
+.carousel--card:hover {
+  opacity: 1;
+  transform: scale3d(1.1, 1.1, 1.1);
+  background: rgba($color-blue, 0.1);
+
+  .carousel--logo {
+    transform: scale3d(1.3, 1.3, 1.3);
+  }
+  .topcard {
+    animation: sidetoside 0.4s;
+    width: 100%;
+  }
+}
+.carousel--b {
+  display: flex;
+  align-items: center;
+}
+.carousel--title {
+  font-weight: 200;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-family: $mono-f;
+}
+.carousel--c {
+  font-size: small;
+  color: $color-sky;
+}
+.carousel--logo {
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+  object-fit: contain;
+  transition: ease 0.5s;
+}
+
+.topcard {
+  position: absolute;
+  bottom: 0;
+  @include for-size(m) {
+    width: 0%;
+  }
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 6px;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.github,
+.Github {
+  background: $github;
+}
+.instagram,
+.Instagram {
+  background: $instagram;
+}
+.twitter,
+.Twitter {
+  background: $twitter;
+}
+.gmail,
+.Gmail {
+  background: $gmail;
+}
+@keyframes sidetoside {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

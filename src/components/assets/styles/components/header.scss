@@ -1,0 +1,70 @@
+@import "../vars.scss";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // background: red;
+  z-index: 1;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  // color: white;
+}
+.header--box {
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+}
+.header--link {
+
+  padding: 5px;
+  // padding: 5px;
+  text-decoration: none;
+  font-family: $mono-f;
+  font-size: small;
+  color: $color-white;
+  position: relative;
+  transition: .3s ease;
+  &:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  &:hover .link-a {
+    animation: sidetoside-link .3s;
+    width: 100%;
+  }
+}
+.header--b{
+  border: solid 1px white;
+  background: none;
+  animation: move 4s;
+}
+.link-a {
+  height: 2px;
+  background: $color-white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes sidetoside-link {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes move{
+  0%{
+    transform: scale3d(1.2,1.2,1.2);
+    filter: brightness(200);
+    background: white;
+  }
+  100%{
+    filter: brightness(1);
+    background: transparent;
+    transform: scale3d(1,1,1);
+  }
+}
