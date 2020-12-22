@@ -4,7 +4,7 @@ import TypeWriter from "./typewriter";
 export default function Header({ callback }) {
   useEffect(() => {
     TypeWriter({
-      words: ["[+-/*]", "click me", "[../..]}", "click me :)"],
+      words: ["click me", "click me", "[../..]}", "click me :)", '[.../42_:*-]'],
       SpeedSchrtr: 100,
       SpeedWord: 4000,
       query: ".header--b",

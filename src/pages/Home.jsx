@@ -33,7 +33,7 @@ export default function Home() {
               "https://boxboat.com/assets/wf/images/github.9412ae55426a.png"
             }
             title="Github"
-            description="All my prjects in here"
+            description="All my projects here"
             link={"https://github.com/yael-cmp"}
           />
           <Card
@@ -41,12 +41,13 @@ export default function Home() {
               "https://www.flaticon.es/svg/static/icons/svg/1384/1384065.svg"
             }
             title="Twitter"
-            description="you can also contact me here"
+            description=""
             link={"https://twitter.com/yael_cmp"}
           />
           <Card
             logo={"https://image.flaticon.com/icons/png/512/281/281769.png"}
             title="Gmail"
+            description='send me an email'
             link={"mailto:enrikeyael2@gmail.com"}
           />
         </Carousel>
